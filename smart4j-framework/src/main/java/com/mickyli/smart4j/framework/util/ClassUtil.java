@@ -107,11 +107,11 @@ public class ClassUtil {
         for (File file : files){
             String fileName = file.getName();
             if(file.isFile()){
-                String clssName = fileName.substring(0, fileName.lastIndexOf("."));
+                String className = fileName.substring(0, fileName.lastIndexOf("."));
                 if(StringUtil.isNotEmpty(packageName)){
-                    clssName = packageName + "." + clssName;
+                    className = packageName + "." + className;
                 }
-                doAddClass(classSet, clssName);
+                doAddClass(classSet, className);
             }else {
                 String subPackagePath = fileName;
                 if (StringUtil.isNotEmpty(packagePath)){
